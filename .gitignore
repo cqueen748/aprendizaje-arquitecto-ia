@@ -1,3 +1,14 @@
-
 # Entorno virtual local
 .venv/
+
+# Datos y expedientes: no publicar
+/datos/
+*.pdf
+*.PDF
+*.db
+*.db-*
+
+# Archivos generados por Python y el sistema
+__pycache__/
+*.py[cod]
+.DS_Store

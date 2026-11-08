@@ -1,18 +1,7 @@
-# Python
+# Ubicación anterior de Python
 
-Ejercicios y proyectos desarrollados en Python.
+Los tres scripts de calentamiento se trasladaron, sin modificar su código, a [semana-00-entorno](../mes-01-02-python-git-sql/semana-00-entorno/).
 
-Objetivos:
+La ruta activa está en [hoja-de-ruta.md](../docs/hoja-de-ruta.md). Este directorio se conserva como referencia histórica.
 
-- Aprender sintaxis básica
-- Variables
-- Funciones
-- Condicionales
-- Bucles
-- Archivos
-
-Proyecto asociado:
-
-Calculadora Financiera
-
-Estado: En curso.
+`validar_total.py` no estaba en la versión remota revisada. Si existe en un equipo, conservarlo y revisar su estado con el tutor antes de moverlo o sincronizar.
