@@ -1,9 +1,9 @@
 # Progreso · Tutor IA documental verificada
 
 Mes actual: 1
-Semana del mes: 1 (cierre original: 8 nov 2026; evaluación formal pendiente al 26 nov 2026)
+Semana del mes: 1 (cierre original: 8 nov 2026; evaluación formal pendiente al 27 nov 2026)
 Entregable del mes: script que inventaría PDFs → SQLite, en GitHub
-Estado del entregable: en desarrollo. Inventario v0 con nombres, tamaños en bytes y total de PDFs. Práctica separada de argumentos y validación de carpeta completada. SQLite pendiente.
+Estado del entregable: en desarrollo. Inventario v1 recibe y valida la carpeta por argumento, lista nombres y tamaños en bytes y cuenta PDFs. Probado en Mac; prueba de v1 en Windows pendiente. SQLite pendiente.
 
 ## Avances y evidencias
 - Alcance del inventario v0: recorrer una carpeta y sus subcarpetas, seleccionar PDFs, imprimir nombre y tamaño en bytes y contar los PDFs encontrados. Sin hash ni SQLite en este ejercicio.
@@ -33,6 +33,22 @@ Estado del entregable: en desarrollo. Inventario v0 con nombres, tamaños en byt
 - Duración real: pendiente de informar por Carlos.
 - Alcance: práctica separada; la recepción de argumentos todavía no está integrada en inventario_v0.py.
 
+## Sesión del 27 nov 2026 · Inventario v1 en Mac
+- Objetivo: integrar la recepción y validación de la carpeta en el inventario, conservando inventario_v0.py.
+- Hecho: inventario_v1.py recibe la ruta mediante sys.argv[1], comprueba la cantidad de argumentos y valida la carpeta con is_dir().
+- Prueba sin argumento: mostró el aviso solicitado y se detuvo.
+- Prueba con ruta inexistente: mostró el aviso de ruta no válida y se detuvo.
+- Prueba con datos/expediente_prueba: listó tres PDFs con sus tamaños y mostró total 3.
+- Prueba con datos/expediente_prueba/anexos: listó un PDF de 310572 bytes y mostró total 1.
+- Muestra preparada por Carlos: dos PDFs en la carpeta principal y uno en anexos.
+- Evidencia: salidas de ejecución compartidas por Carlos; no se realizó inspección directa de su equipo.
+- Incidencia: se ejecutó una versión sin los cambios guardados; después de guardar se repitió la prueba con el resultado esperado.
+- Dificultad detectada: inicialmente propuso modificar la línea del código para cambiar de carpeta.
+- Refuerzo: ejecución del mismo script con dos rutas diferentes, sin modificar el código.
+- Evidencia de comprensión guiada: identificó "datos/expediente_prueba" como argumento para volver a contar los tres PDFs.
+- Evaluación: cuatro casos observados con resultados esperados en Mac. Retención sin pistas y ejecución de v1 en Windows pendientes.
+- Duración real: pendiente de informar por Carlos.
+
 ## Respaldo y sincronización
 - 53fba07: incorporación de cuatro scripts de práctica.
 - c00011f: integración con los cambios del plan y envío confirmado.
@@ -40,8 +56,9 @@ Estado del entregable: en desarrollo. Inventario v0 con nombres, tamaños en byt
 - c6c8077: contador de PDFs enviado a GitHub.
 - Mac actualizado desde 7b39be6 hasta c6c8077 mediante fast-forward.
 - 8655128: practica_argumentos.py guardado en el Mac y enviado a GitHub.
-- Sincronización de Windows con 8655128: pendiente de confirmar.
-
+- Sincronización de Windows con 51af72c y prueba de inventario_v1.py: pendientes.
+- f07fd90: registro de la práctica de argumentos y evidencias enviado a GitHub.
+- 51af72c: inventario_v1.py enviado a GitHub.
 
 ## Decisiones (ADR)
 - Pendiente: revisar los ADR existentes en docs/adr y registrar sus referencias exactas.
@@ -56,10 +73,11 @@ Estado del entregable: en desarrollo. Inventario v0 con nombres, tamaños en byt
 
 ## Ingresos ligados al plan
 - Sin información registrada.
-
+ 
 ## Próxima sesión
 - Recuperar sin pistas la diferencia entre cantidad de elementos, posiciones y argumentos.
-- Integrar la recepción y validación de la carpeta en una nueva versión del inventario, conservando v0.
+- Comprobar sin pistas cómo seleccionar otra carpeta mediante el argumento de ejecución.
+- Probar inventario_v1.py en Windows después de sincronizar el repositorio.
 - Registrar horas reales y completar la evaluación formal pendiente.
 - Conciliar NOTAS.md, PLAN.md y las referencias a los ADR.
 - Sincronizar Windows antes de retomar allí.
